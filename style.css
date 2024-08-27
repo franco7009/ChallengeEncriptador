@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+:root{
+    --color-primario: #F3F5FC;
+    --color-secundario: #FFFFFF;
+    --color-terciario: #0A3871;
+    --color-cuaternario: #D8DFE8;
+    --color-quintenario: #67808E;
+}
+
+body{
+    background-color: var(--color-primario);
+}
+
+.header{
+    padding: 3% 0% 0% 5%;
+}
+
+.encriptador{
+    display: flex;
+    padding: 2.5rem 2.5rem 2.5rem 15rem;
+    gap: 5rem;
+    justify-content: center;
+    height: 64rem;
+    width: 100wh;
+    background-color: var(--color-secundario);
+}
+
+.encriptador__ingreso{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    gap: 1rem;
+}
+
+.encriptador__ingreso__texto{
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    background-color: var(--color-secundario);
+    text-align: top;
+    color: var(--color-terciario);
+}
+
+::placeholder{
+    color: var(--color-terciario);
+}
+
+.encriptador__ingreso__aclaracion{
+    display: flex;
+    gap: 5px;
+    color: var(--color-quintenario);
+}
+
+.iconify{
+    height: 15px;
+    width: 15px;
+    color: var(--color-quintenario);
+}
+
+.encriptador__ingreso__aclaracion__texto{
+    font-size: 12px;
+    color: var(--color-quintenario);
+}
+
+.encriptador__ingreso__botones{
+    display: flex;
+    gap: 1rem;
+    padding: 0 0 2.5rem 0;
+}
+
+.encriptador__ingreso__botones__encriptar, .encriptador__ingreso__botones__desencriptar{
+    width: 100%;
+    height: 4.18rem;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid var(--color-terciario);
+    cursor: pointer;
+}
+
+.encriptador__ingreso__botones__encriptar{
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+}
+
+.encriptador__ingreso__botones__encriptar:hover{
+    background-color: var(--color-cuaternario);
+    color: var(--color-terciario);
+}
+
+.encriptador__ingreso__botones__desencriptar, .encriptador__respuesta__desencriptada__copiar__boton{
+    background-color: var(--color-cuaternario);
+    color: var(--color-terciario);
+}
+
+.encriptador__ingreso__botones__desencriptar:hover, .encriptador__respuesta__desencriptada__copiar__boton:hover{
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+}
+
+
+.encriptador__respuesta{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primario);
+    border-radius: 32px;
+    width: 25rem;
+    justify-content: center;
+}
+
+.encriptador__respuesta__defecto{
+    gap: 32px;
+    padding: 50% 5%;
+    height: 100%;
+}
+
+.encriptador__respuesta__defecto__texto{
+    text-align: center;
+    gap: 16px;
+    color: var(--color-terciario);
+}
+
+.encriptador__respuesta__defecto__texto__resaltado{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.encriptador__respuesta__defecto__texto__regular{
+    font-size: 1rem;
+}
+
+.encriptador__respuesta__desencriptada{
+    height: 100%;
+    padding: 2rem 2rem 0;
+    gap: 1rem;
+}
+
+.encriptador__respuesta__desencriptada__texto{
+    height: 90%;
+    font-size: 1.5rem;
+}
+
+.encriptador__respuesta__desencriptada__copiar__boton{
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid var(--color-terciario);
+    cursor: pointer;
+    height: 4.18rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-terciario);
+    color: white;
+    text-align: center;
+    padding: 24px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+
+    .header{
+        padding: 7% 0% 5% 1%;
+    }
+    
+    .encriptador{
+        flex-direction: column;
+        padding: 2.5rem 2.5rem 2.5rem 2.5rem
+    }
+
+    .encriptador__ingreso{
+        width: 100%;
+        height: 65%;
+    }
+
+    .encriptador__respuesta{
+        width: 100%;
+        height: 35%;
+    }
+
+    .encriptador__respuesta__desencriptada__texto{
+        height: 70%;
+        font-size: 1.5rem;
+    }
+
+    .encriptador__respuesta__defecto__imagen{
+        display: none;
+    }
+
+    @media (max-width: 430px) {
+
+        .encriptador__ingreso__botones{
+            flex-direction: column;
+        }
+
+        .encriptador__respuesta{
+            height: auto;
+        }
+    }
+}

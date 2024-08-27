@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de textos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/Logo.png" alt="Logo de Alura">
+    </header>
+    <main class="encriptador">
+        <div class="encriptador__ingreso">
+            <textarea class="encriptador__ingreso__texto" placeholder="Ingrese el texto aquí" name="" id="textoIngresado"></textarea>
+            <div class="encriptador__ingreso__aclaracion">
+                <span class="iconify" data-icon="mdi:alert-circle" data-inline="false"></span>
+                <p class="encriptador__ingreso__aclaracion__texto">Solo letras minúsculas y sin acentos.</p>
+            </div>
+             
+            <div class="encriptador__ingreso__botones">
+                <button class="encriptador__ingreso__botones__encriptar" onclick="encriptarTexto();">Encriptar</button> 
+                <button class="encriptador__ingreso__botones__desencriptar" onclick="desencriptarTexto();">Desencriptar</button>
+            </div>
+        </div>
+        <div class="encriptador__respuesta">
+            <div class="encriptador__respuesta__defecto" id="respuestaDefecto">
+                <img class="encriptador__respuesta__defecto__imagen" src="./assets/Muñeco.png" alt="Persona observando un diamante">
+                <div class="encriptador__respuesta__defecto__texto">
+                    <p class="encriptador__respuesta__defecto__texto__resaltado">Ningún mensaje fue encontrado</p>
+                    <p class="encriptador__respuesta__defecto__texto__regular">Ingrese el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+            <div class="encriptador__respuesta__desencriptada" id="respuestaDesencriptada" hidden>
+                <p class="encriptador__respuesta__desencriptada__texto" id="respuestaDesencriptadaTexto"></p>
+                <div class="encriptador__respuesta__desencriptada__copiar">
+                    <button class="encriptador__respuesta__desencriptada__copiar__boton" onclick="copiarAlPortapapeles('respuestaDesencriptada')" >Copiar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer">Franco Castillo</p>
+    </footer>
+</body>
+</html>
